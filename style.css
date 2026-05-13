@@ -319,3 +319,43 @@ select {
   cursor: pointer;
 }
 
+/* Estilos para títulos de filmes */
+#titulo-filme-1,
+#titulo-filme-2,
+#titulo-filme-3,
+#titulo-filme-4 {
+  color: black;
+}
+
+/* Estilo para título principal do filme em site2 */
+#titulo-filme-principal {
+  font-size: 48px;
+  color: black;
+}
+
+/* Estilo para descrição do filme */
+#descricao-filme {
+  line-height: 25px;
+}
+
+/* Estilos para títulos de seções no footer */
+#titulo-legal,
+#titulo-quem-somos,
+#titulo-contato,
+#titulo-legal-site2,
+#titulo-quem-somos-site2,
+#titulo-contato-site2 {
+  font-size: 25px;
+}
+
+/* Estilos para elementos dos dias da semana */
+#dia-segunda h3,
+#dia-terca h3,
+#dia-quarta h3,
+#dia-quinta h3,
+#dia-sexta h3,
+#dia-sabado h3,
+#dia-domingo h3 {
+  color: black;
+}
+
