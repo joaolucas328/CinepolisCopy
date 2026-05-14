@@ -319,7 +319,6 @@ select {
   cursor: pointer;
 }
 
-/* Estilos para títulos de filmes */
 #titulo-filme-1,
 #titulo-filme-2,
 #titulo-filme-3,
@@ -327,18 +326,15 @@ select {
   color: black;
 }
 
-/* Estilo para título principal do filme em site2 */
 #titulo-filme-principal {
   font-size: 48px;
   color: black;
 }
 
-/* Estilo para descrição do filme */
 #descricao-filme {
   line-height: 25px;
 }
 
-/* Estilos para títulos de seções no footer */
 #titulo-legal,
 #titulo-quem-somos,
 #titulo-contato,
@@ -348,7 +344,7 @@ select {
   font-size: 25px;
 }
 
-/* Estilos para elementos dos dias da semana */
+
 #dia-segunda h3,
 #dia-terca h3,
 #dia-quarta h3,
