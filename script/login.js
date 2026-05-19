@@ -8,7 +8,7 @@ Bhorario.forEach(botao => {
 
         if (!usuarioLogado) {
 
-            document.getElementById('modalLogin').style.display = 'flex'
+            window.location.href = "../html/login.html"
 
         } else {
 
