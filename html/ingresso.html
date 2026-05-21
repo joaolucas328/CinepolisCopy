@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinepolisCopy</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/pag2.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/ingresso.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="baseIngresso">
+
+        <div class="conteudo">
+
+
+            <div class="quadradoCinza">
+
+                <img src="../PastaImagens/cineNomeAzul.png" id="cineNomeTopo"
+                    style="width: 112.5px; height: 50px; margin-bottom: 40px;">
+
+                <p>Com o <b>CLUB CINÉPOLIS</b> você paga mais barato.</p>
+                <p>Garanta descontos exclusivos e ganhe cashback.</p>
+
+                <button class="btnConvidado" id="btnConvidado">
+                    CADASTRE-SE
+                    <span>→</span>
+                </button>
+
+                <h1 style="margin-top: 20px; font-size: 25px;">1. Selecione seus assentos</h1>
+
+
+                <div class="theater-section">
+
+                    <div class="screen">
+                        <div class="screen-banner">T E L A</div>
+                    </div>
+
+                    <div class="seats-container">
+                        <div class="rows-section" id="seatsContainer"></div>
+                        <div class="zoom-controls">
+                            <button class="zoom-btn" onclick="zoomIn()">+</button>
+                            <button class="zoom-btn" onclick="zoomOut()">−</button>
+                        </div>
+                    </div>
+                    <div class="screen-direction">FUNDO DA SALA</div>
+                </div>
+
+
+
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-icon available"></div>
+                        <span class="legend-label">Disponível</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon selected"></div>
+                        <span class="legend-label">Selecionado</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon occupied"></div>
+                        <span class="legend-label">Ocupado</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon accessibility"><span style="font-size: 12px;">AC</span></div>
+                        <span class="legend-label">Acompanhante</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon companion">♿</div>
+                        <span class="legend-label">Cadeirante</span>
+                    </div>
+                    <div class="legend-item">
+                        <div style="width: 28px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="8" viewBox="0 0 24 8">
+                                <line x1="0" y1="4" x2="24" y2="4" stroke="#999" stroke-width="2"
+                                    stroke-dasharray="4,4" />
+                            </svg>
+                        </div>
+                        <span class="legend-label">Separação</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="quadradoAzul">
+
+                <img src="../PastaImagens/filme1.jpg" id="filmePosterLogin">
+
+                <h2>Demon Slayer</h2>
+
+                <p class="tempo">2h12</p>
+
+                <p class="tipo">
+                    Acessibilidade · Sala Tradicional
+                </p>
+
+                <div class="linhaAzul"></div>
+
+                <div class="data">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2">
+                        </path>
+                        <path
+                            d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6">
+                        </path>
+                    </svg>
+                    <p class="local">Cinépolis Três Lagoas (MS) · Screen 3</p>
+                </div>
+
+                <div class="data">
+                    <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2M5 20V8h14V6v14z">
+                            </path>
+                        </svg></i>
+                    <p class="dataBlack"> 13:00</p>
+                    <p>, Thursday, May 21, 2026</p>
+                </div>
+
+
+
+                <div class="info-section">
+                    <div class="selection-info">
+                        Assentos selecionados: <strong id="selectedCount">0</strong> ·
+                        Total: <strong id="totalPrice">R$ 0,00</strong>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="clearSelection()">LIMPAR</button>
+                        <button class="btn btn-primary" id="continueBtn" onclick="continueSelection()" disabled>
+                            CONTINUAR
+                            <span style="margin-left: 8px;">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer2">
+
+            <img src="../PastaImagens/cineNome.png" id="cineNomeBaixo">
+
+            <a href="">Configurações de privacidade</a>
+
+            <div class="linhaFooter"></div>
+
+            <p>© Cinépolis Brasil 2026</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../script/index.js"></script>
+    <script type="module" src="../script/login.js"></script>
+    <script src="../script/ingresso.js"></script>
+</body>
+
+</html>

@@ -20,46 +20,6 @@ Bhorario.forEach(botao => {
 
 })
 
-const modalLogin = document.getElementById('modalLogin')
-const modalCadastro = document.getElementById('modalCadastro')
-
-const abrirCadastro = document.getElementById('abrirCadastro')
-const fecharCadastro = document.getElementById('fecharModal')
-const fecharLogin = document.getElementById('fecharLogin')
-
-
-if (abrirCadastro) {
-    abrirCadastro.addEventListener('click', () => {
-        modalLogin.style.display = 'none'
-        modalCadastro.style.display = 'flex'
-    })
-}
-
-if (fecharCadastro) {
-    fecharCadastro.addEventListener('click', () => {
-        modalCadastro.style.display = 'none'
-    })
-}
-
-if (fecharLogin) {
-    fecharLogin.addEventListener('click', () => {
-        modalLogin.style.display = 'none'
-    })
-}
-
-
-
-window.addEventListener('click', (e) => {
-
-    if (e.target === modalLogin) {
-        modalLogin.style.display = 'none'
-    }
-
-    if (e.target === modalCadastro) {
-        modalCadastro.style.display = 'none'
-    }
-
-})
 
 const cadastroForm = document.getElementById('cadastroForm')
 
@@ -90,20 +50,26 @@ if (cadastroForm) {
 
 const loginForm = document.getElementById('loginForm')
 
+    let name = document.getElementById('loginName').value
+    let senha = document.getElementById('loginSenha').value
+
+    
+
+
 if (loginForm) {
 
     loginForm.addEventListener('submit', (e) => {
 
         e.preventDefault()
 
-        let email = document.getElementById('loginEmail').value
+        let name = document.getElementById('loginName').value
         let senha = document.getElementById('loginSenha').value
 
         let usuarioSalvo = JSON.parse(localStorage.getItem('usuario'))
 
         if (
             usuarioSalvo &&
-            email === usuarioSalvo.email &&
+            name === usuarioSalvo.name &&
             senha === usuarioSalvo.senha
         ) {
 
@@ -136,4 +102,13 @@ if (logoutBtn) {
 
     })
 
+}
+
+const btnConvidado = document.getElementById('btnConvidado')
+
+if (btnConvidado) {
+
+    btnConvidado.addEventListener('click', () => {
+        window.location.href = "../html/ingresso.html"
+    })
 }
