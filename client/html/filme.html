@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Filme</title>
+</head>
+<body>
+
+  <div id="movie"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const id = params.get("id");
+
+    fetch(`http://localhost:3000/movies/${id}`)
+      .then(res => res.json())
+      .then(movie => {
+        document.getElementById("movie").innerHTML = `
+          <img src="${movie.image}" width="300">
+
+          <h1>${movie.title}</h1>
+
+          <p>${movie.description}</p>
+        `;
+      });
+  </script>
+
+</body>
+</html>
